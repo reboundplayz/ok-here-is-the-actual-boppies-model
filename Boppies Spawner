@@ -5,8 +5,8 @@ local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd
 local entity = Spawner.createEntity({
     CustomName = "Boppies", -- Custom name of your entity
     Model = "https://github.com/reboundplayz/ok-here-is-the-actual-boppies-model/raw/refs/heads/main/BOPPIES%20REAL%20(not%20mine).rbxm?raw=true", -- Can be GitHub file or rbxassetid
-    Speed = 350, -- Percentage, 100 = default Rush speed
-    DelayTime = 5, -- Time before starting cycles (seconds)
+    Speed = 400, -- Percentage, 100 = default Rush speed
+    DelayTime = 6, -- Time before starting cycles (seconds)
     HeightOffset = 1,
     CanKill = true,
     NoDieOnCrouching = false,
@@ -28,7 +28,7 @@ local entity = Spawner.createEntity({
     Cycles = {
         Min = 2,
         Max = 2,
-        WaitTime = 5,
+        WaitTime = 0,
     },
     CamShake = {
         true, -- Enabled/Disabled
@@ -105,65 +105,12 @@ function CustomGitSound(soundlink, vol, filename)
     sound.Parent = workspace
     sound.Name = "BoppiesSound"
     sound.PlaybackSpeed = 1
-    sound.Looped = true
-    sound.Volume = 0.05
+    sound.Looped = false
+    sound.Volume = 1
    sound:Play()
 end
 
-CustomGitSound("https://github.com/PABMAXICHAC/doors-monsters-models/raw/refs/heads/main/Boppies2077.mp3?raw=true", 1, " BoppiesSound")
-
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.1
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.3
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.8
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 2
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.8
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.3
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.1
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.1
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.3
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.8
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 2
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 1
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.8
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.5
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.3
-wait(0.5)
-game.Workspace.BoppiesSound.Volume = 0.1
+CustomGitSound("https://github.com/reboundplayz/doors-fear-mode/raw/refs/heads/main/ScreenRecording_06-29-2025%2016-01-40_1.mp3?raw=true", 1, " BoppiesSound")
 end
 
 entity.Debug.OnEntityFinishedRebound = function()
