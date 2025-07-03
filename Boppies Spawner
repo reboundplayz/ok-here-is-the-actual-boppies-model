@@ -5,7 +5,7 @@ local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd
 local entity = Spawner.createEntity({
     CustomName = "Boppies", -- Custom name of your entity
     Model = "https://github.com/reboundplayz/ok-here-is-the-actual-boppies-model/raw/refs/heads/main/BOPPIES%20REAL%20(not%20mine).rbxm?raw=true", -- Can be GitHub file or rbxassetid
-    Speed = 1000, -- Percentage, 100 = default Rush speed
+    Speed = 465, -- Percentage, 100 = default Rush speed
     DelayTime = 6, -- Time before starting cycles (seconds)
     HeightOffset = 1,
     CanKill = true,
