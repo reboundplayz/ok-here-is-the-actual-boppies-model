@@ -4,7 +4,7 @@ local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd
 -- Create entity
 local entity = Spawner.createEntity({
     CustomName = "Threat", -- Custom name of your entity
-    Model = "https://github.com/reboundplayz/doors-fear-mode-models/raw/refs/heads/main/threat%20real.rbxm?raw=true", -- Can be GitHub file or rbxassetid
+    Model = "rbxassetid://99074482100080", -- Can be GitHub file or rbxassetid
     Speed = 150, -- Percentage, 100 = default Rush speed
     DelayTime = 3, -- Time before starting cycles (seconds)
     HeightOffset = 1,
@@ -14,7 +14,7 @@ local entity = Spawner.createEntity({
     AntiCrucifix = false,
     KillRange = 50,
     OneRoom = false,
-    DieOnLook = false,
+    DieOnLook = true,
     BreakLights = true,
     BackwardsMovement = true,
      MovementDeath = {
@@ -48,7 +48,7 @@ local entity = Spawner.createEntity({
             },
             Sound2 = {
                 "rbxassetid://5263560896", -- SoundId Link or Roblox ID
-                { Volume = 20 }, -- Sound properties
+                { Volume = 10 }, -- Sound properties
             },
             Flashing = {
                 true, -- Enabled/Disabled
@@ -100,32 +100,11 @@ end
 
 entity.Debug.OnEntityDespawned = function()
     print("Entity has despawned:")
-    game.Workspace.BoppiesSound:Destroy()
     game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 255, 255)
 end
 
 entity.Debug.OnEntityStartMoving = function()
     print("Entity has started moving:")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local sound = Instance.new("Sound")
-    sound.SoundId = GitAud(soundlink, filename)
-    sound.Parent = workspace
-    sound.Name = "BoppiesSound"
-    sound.PlaybackSpeed = 1
-    sound.Looped = true
-    sound.Volume = 1
-   sound:Play()
-end
-
-CustomGitSound("https://github.com/reboundplayz/doors-fear-mode-images/raw/refs/heads/main/ScreenRecording_06-24-2025%2017-40-08_1.mp3?raw=true", 1, " BoppiesSound")
 end
 
 entity.Debug.OnEntityFinishedRebound = function()
