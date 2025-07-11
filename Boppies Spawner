@@ -5,7 +5,7 @@ local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd
 local entity = Spawner.createEntity({
     CustomName = "Boppies", -- Custom name of your entity
     Model = "rbxassetid://96430860903676", -- Can be GitHub file or rbxassetid
-    Speed = 465, -- Percentage, 100 = default Rush speed
+    Speed = 600, -- Percentage, 100 = default Rush speed
     DelayTime = 6, -- Time before starting cycles (seconds)
     HeightOffset = 1,
     CanKill = true,
@@ -27,7 +27,7 @@ local entity = Spawner.createEntity({
     },
     Cycles = {
         Min = 2,
-        Max = 2,
+        Max = 3,
         WaitTime = 0,
     },
     CamShake = {
