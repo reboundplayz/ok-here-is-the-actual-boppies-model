@@ -39,8 +39,8 @@ local entity = Spawner.createEntity({
         true, -- Enabled/Disabled
         {
             Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "https://static.wikia.nocookie.net/doors-hard-mode/images/0/07/Bopper%F0%9F%98%84.png/revision/latest?cb=20240526024137", -- Image1 url
-            Image2 = "https://static.wikia.nocookie.net/doors-hard-mode/images/0/07/Bopper%F0%9F%98%84.png/revision/latest?cb=20240526024137", -- Image2 url
+            Image1 = "https://raw.githubusercontent.com/reboundplayz/doors-fear-mode-images/refs/heads/main/IMG_7278.png", -- Image1 url
+            Image2 = "https://raw.githubusercontent.com/reboundplayz/doors-fear-mode-images/refs/heads/main/IMG_7278.png", -- Image2 url
             Shake = true,
             Sound1 = {
                 "https://github.com/reboundplayz/Boppies-doors-fear-mode-sounds/raw/refs/heads/main/Project%20Name%2039.mp3", -- SoundId Link or Roblox ID
