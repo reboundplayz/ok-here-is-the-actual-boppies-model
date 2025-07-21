@@ -101,6 +101,16 @@ end
 entity.Debug.OnEntityDespawned = function()
     print("Entity has despawned:")
     game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 255, 255)
+    ---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "I Love Pink!!!",
+    Desc = "THREAT WHAT HAPPENED TO YOU?",
+    Reason = "Encounter Threat",
+    Image = "rbxassetid://81864478712436"
+})
 end
 
 entity.Debug.OnEntityStartMoving = function()
