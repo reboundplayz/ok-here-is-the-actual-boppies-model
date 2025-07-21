@@ -86,6 +86,16 @@ end
 
 entity.Debug.OnEntityDespawned = function()
     print("Entity has despawned:")
+    ---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Fought Another Beast And Survived",
+    Desc = "Last Time Was Easy, But... HOW",
+    Reason = "Encounter WH1T3_RW",
+    Image = "rbxassetid://93107614168300"
+})
 end
 
 entity.Debug.OnEntityStartMoving = function()
