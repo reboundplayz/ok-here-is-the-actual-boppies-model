@@ -14,7 +14,7 @@ local sound = Instance.new("Sound")
 wait(6)
 if chr:GetAttribute("Crouching") then
 game.Players.LocalPlayer.Character.Humanoid.Health -= 1000
-game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Bliss[Crouch Early]"
+game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Bliss[Crouched Early]"
 end
 wait(2)
 local Players = game:GetService("Players")
@@ -35,6 +35,16 @@ imageLabel.Parent = screenGui
 task.delay(3, function()
     if screenGui then
         screenGui:Destroy()
+        ---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "CROUCH NOW!!!",
+    Desc = "Whatrrrrr I Do?",
+    Reason = "Encounter Bliss",
+    Image = "rbxassetid://97762043789701"
+})
     end
 end)
 wait(2)
