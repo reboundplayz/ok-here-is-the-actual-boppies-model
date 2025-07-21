@@ -1,3 +1,9 @@
+-- Boppies
+coroutine.wrap(function()
+    while true do
+        wait(200)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 
 
@@ -39,12 +45,12 @@ local entity = Spawner.createEntity({
         true, -- Enabled/Disabled
         {
             Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "nil", -- Image1 url
-            Image2 = "https://raw.githubusercontent.com/reboundplayz/doors-fear-mode-images/refs/heads/main/IMG_7278.png", -- Image2 url
+            Image1 = "https://static.wikia.nocookie.net/doors-hard-mode/images/0/07/Bopper%F0%9F%98%84.png/revision/latest?cb=20240526024137", -- Image1 url
+            Image2 = "https://static.wikia.nocookie.net/doors-hard-mode/images/0/07/Bopper%F0%9F%98%84.png/revision/latest?cb=20240526024137", -- Image2 url
             Shake = true,
             Sound1 = {
-                "nil", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
+                "https://github.com/reboundplayz/Boppies-doors-fear-mode-sounds/raw/refs/heads/main/Project%20Name%2039.mp3", -- SoundId Link or Roblox ID
+                { Volume = 20 }, -- Sound properties
             },
             Sound2 = {
                 "https://github.com/reboundplayz/Boppies-doors-fear-mode-sounds/raw/refs/heads/main/Project%20Name%2039.mp3", -- SoundId Link or Roblox ID
@@ -56,8 +62,8 @@ local entity = Spawner.createEntity({
             },
             Tease = {
                 false, -- Enabled/Disabled
-                Min = 0,
-                Max = 0,
+                Min = 1,
+                Max = 3,
             },
         },
     },
