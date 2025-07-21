@@ -141,6 +141,17 @@ end)
 -- Wait for the room to change
 
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Let Me Open The Door!",
+    Desc = "Don't crash my game",
+    Reason = "Encounter Nightmare Hunger",
+    Image = "rbxassetid://94060220684903"
+})
+
 function GitAud(soundgit,filename)
 
     SoundName=tostring(SoundName)
